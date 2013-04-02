@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Effects Sheet</name>
+    <events>
+        <variable comment="Time at which to start the transition effect." constant="0" name="startTime" static="0" type="number">0</variable>
+        <variable comment="Length, in seconds, of the transition." constant="0" name="duration" static="0" type="number">2</variable>
+        <variable comment="1 if the transition is running." constant="0" name="isTransitionRunning" static="0" type="number">0</variable>
+        <event-group collapsed="1" description="Fade in and out" title="Fade In/Out">
+            <sub-events>
+                <comment>This message is shown if WebGL is not supported.</comment>
+                <event-block>
+                    <conditions>
+                        <condition id="-27" inverted="1" name="Effects are supported" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" type="Text">
+                            <param id="0" name="Text">&quot;Effects are not supported!  Try Chrome or Firefox and check graphics drivers are up to date.&quot;</param>
+                        </action>
+                        <action id="4" name="Set font color" type="Text">
+                            <param id="0" name="Color">rgb(255, 0, 0)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block>
+                    <conditions>
+                        <condition id="-2" name="On start of layout" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" type="System">
+                            <param id="0" name="Variable">startTime</param>
+                            <param id="1" name="Value">time</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block disabled="1">
+                    <conditions>
+                        <condition id="-7" name="Compare time" type="System">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="Time (seconds)">startTime + duration</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-31" name="Set layout effect parameter" type="System">
+                            <param id="0" name="Effect">&quot;AdjustHSL&quot;</param>
+                            <param id="1" name="Parameter index">2</param>
+                            <param id="2" name="Value">lerp(200, 100, (time - startTime) / duration)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Fade the luminance from 100 to 0 after pressing a key.</comment>
+                <event-block>
+                    <conditions>
+                        <condition id="1" name="On any key pressed" type="Keyboard" />
+                        <condition id="-14" name="Compare variable" type="System">
+                            <param id="0" name="Variable">isTransitionRunning</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" type="System">
+                            <param id="0" name="Variable">startTime</param>
+                            <param id="1" name="Value">time</param>
+                        </action>
+                        <action id="-9" name="Set value" type="System">
+                            <param id="0" name="Variable">isTransitionRunning</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Adjust the effect intensity during the transition.  Handle the first half of the duration separately (fade in, then fade out).</comment>
+                <event-block>
+                    <conditions>
+                        <condition id="-14" name="Compare variable" type="System">
+                            <param id="0" name="Variable">isTransitionRunning</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-31" name="Set layout effect parameter" type="System">
+                            <param id="0" name="Effect">&quot;AdjustHSL&quot;</param>
+                            <param id="1" name="Parameter index">2</param>
+                            <param id="2" name="Value">100 - ((time - startTime) / duration) * 100</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <comment>When the transition is finished, restart the layout.</comment>
+                        <event-block>
+                            <conditions>
+                                <condition id="-7" name="Compare time" type="System">
+                                    <param id="0" name="Comparison">4</param>
+                                    <param id="1" name="Time (seconds)">startTime + duration</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-21" name="Reset global variables" type="System" />
+                                <action id="-26" name="Restart layout" type="System" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

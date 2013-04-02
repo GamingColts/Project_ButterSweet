@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2layout>
+    <name>Layout 1</name>
+    <event-sheet>SplashLogo Sheet</event-sheet>
+    <size>
+        <width>640</width>
+        <height>480</height>
+    </size>
+    <margins>
+        <horizontal>640</horizontal>
+        <vertical>480</vertical>
+    </margins>
+    <unbounded-scrolling>0</unbounded-scrolling>
+    <layers>
+        <layer name="Layer 0">
+            <initially-visible>1</initially-visible>
+            <background-color>0,0,0</background-color>
+            <transparent>0</transparent>
+            <parallax>
+                <x>1</x>
+                <y>1</y>
+            </parallax>
+            <zoom-rate>1</zoom-rate>
+            <opacity>1</opacity>
+            <force-own-texture>0</force-own-texture>
+            <blend-mode>0</blend-mode>
+            <effect-fallback>0</effect-fallback>
+            <instances>
+                <instance type="Video">
+                    <properties>
+                        <source>https://s3.amazonaws.com/gaming_Colts/Logo/Gaming_Colts_Podcast_Intro_Final_%5Bno_score_720p_12.webm</source>
+                        <poster></poster>
+                        <autoplay>Yes</autoplay>
+                        <controls>No</controls>
+                        <preload>None</preload>
+                        <loop>No</loop>
+                        <muted>No</muted>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>0</x>
+                        <y>1</y>
+                        <z>0</z>
+                        <width>639</width>
+                        <height>478</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                    </world>
+                </instance>
+            </instances>
+            <effects />
+        </layer>
+    </layers>
+    <nonworld-instances />
+    <effects>
+        <effect-type name="AdjustHSL">
+            <effect id="hsladjust" />
+            <effect-instance type="AdjustHSL">
+                <parameters>
+                    <hue>0</hue>
+                    <luminosity>1</luminosity>
+                    <saturation>1</saturation>
+                </parameters>
+            </effect-instance>
+        </effect-type>
+    </effects>
+</c2layout>
