@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2layout>
-    <name>Layout 2</name>
-    <event-sheet>Event sheet 1</event-sheet>
+    <name>Text Screen Debug</name>
+    <event-sheet>Text Debug sheet</event-sheet>
     <size>
         <width>1280</width>
         <height>1024</height>
@@ -109,8 +109,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>123</x>
-                        <y>383</y>
+                        <x>126</x>
+                        <y>382</y>
                         <z>0</z>
                         <width>399</width>
                         <height>30</height>

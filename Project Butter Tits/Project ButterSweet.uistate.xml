@@ -9,12 +9,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         </active>
         <display name="HTML5" />
     </configurations>
-    <open-tabs>
-        <layout>Layout 1</layout>
-        <layout active="1">Layout 2</layout>
-        <event-sheet>SplashLogo Sheet</event-sheet>
-        <event-sheet>Event sheet 1</event-sheet>
-    </open-tabs>
+    <open-tabs />
     <properties>
         <property expanded="1" name="Project settings" />
         <property expanded="0" name="Window Size" />

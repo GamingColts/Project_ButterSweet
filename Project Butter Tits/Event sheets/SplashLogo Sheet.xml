@@ -108,7 +108,7 @@
                             <actions>
                                 <action id="-21" name="Reset global variables" type="System" />
                                 <action id="-2" name="Go to layout" type="System">
-                                    <param id="0" name="Layout">Layout 2</param>
+                                    <param id="0" name="Layout">Text Screen Debug</param>
                                 </action>
                             </actions>
                         </event-block>

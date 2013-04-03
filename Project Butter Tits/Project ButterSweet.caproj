@@ -35,20 +35,27 @@
         <prop name="Use iOS retina display">Yes</prop>
     </configuration-settings>
     <object-folder expanded="1">
+        <object-folder expanded="0" name="Characters">
+            <object-folder expanded="1" name="Animations" />
+            <object-folder expanded="0" name="Portraits">
+                <object-type name="Aster">
+                    <plugin id="NinePatch" />
+                    <texture />
+                </object-type>
+            </object-folder>
+        </object-folder>
+        <object-folder expanded="0" name="Application Objects">
+            <object-type name="Keyboard">
+                <plugin id="Keyboard" />
+            </object-type>
+            <object-type name="Video">
+                <plugin id="Rex_Video" />
+            </object-type>
+        </object-folder>
         <object-type name="Text">
             <plugin id="Text" />
         </object-type>
-        <object-type name="Keyboard">
-            <plugin id="Keyboard" />
-        </object-type>
-        <object-type name="Video">
-            <plugin id="Rex_Video" />
-        </object-type>
         <object-type name="TextBox">
-            <plugin id="NinePatch" />
-            <texture />
-        </object-type>
-        <object-type name="Aster">
             <plugin id="NinePatch" />
             <texture />
         </object-type>
@@ -58,13 +65,24 @@
     </object-folder>
     <families />
     <layout-folder expanded="1">
-        <layout>Layout 1.xml</layout>
-        <layout>Layout 2.xml</layout>
+        <layout-folder expanded="0" name="Debug">
+            <layout>Text Screen Debug.xml</layout>
+        </layout-folder>
+        <layout-folder expanded="0" name="Misc. Layouts">
+            <layout>Slash Screen.xml</layout>
+            <layout>Title Screen.xml</layout>
+        </layout-folder>
     </layout-folder>
     <event-folder expanded="1">
-        <event-sheet>Effects Sheet.xml</event-sheet>
-        <event-sheet>SplashLogo Sheet.xml</event-sheet>
-        <event-sheet>Event sheet 1.xml</event-sheet>
+        <event-folder expanded="1" name="Level Sheet" />
+        <event-folder expanded="1" name="Misc. Sheets">
+            <event-sheet>Title Screen Sheet.xml</event-sheet>
+            <event-sheet>SplashLogo Sheet.xml</event-sheet>
+            <event-sheet>Effects Sheet.xml</event-sheet>
+        </event-folder>
+        <event-folder expanded="1" name="Debug">
+            <event-sheet>Text Debug sheet.xml</event-sheet>
+        </event-folder>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" />
