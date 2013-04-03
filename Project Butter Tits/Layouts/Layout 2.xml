@@ -52,6 +52,7 @@
                         <fill>Stretch</fill>
                         <initial-visibility>Visible</initial-visibility>
                         <hotspot>Top-left</hotspot>
+                        <seams>Overlap</seams>
                     </properties>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -77,6 +78,7 @@
                         <fill>Stretch</fill>
                         <initial-visibility>Visible</initial-visibility>
                         <hotspot>Top-left</hotspot>
+                        <seams>Overlap</seams>
                     </properties>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>

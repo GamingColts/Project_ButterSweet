@@ -1,15 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2project>
-    <name>Butter Tits</name>
+    <name>Project ButterSweet</name>
     <description></description>
     <version>1.0</version>
     <author></author>
     <unique-id>p9ayxq7v4pot</unique-id>
-    <saved-with-version>11900</saved-with-version>
+    <saved-with-version>12300</saved-with-version>
     <used-plugins>
-        <plugin author="Scirra" id="NinePatch" version="1">9-patch</plugin>
-        <plugin author="" id="Rex_Video" version="1">Video</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Rex.Rainbow, JP Deblonde" id="Rex_Video" version="1">Video</plugin>
+        <plugin author="Scirra" id="NinePatch" version="1">9-patch</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
     </used-plugins>
     <used-behaviors />
