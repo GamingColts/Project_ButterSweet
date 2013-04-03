@@ -7,9 +7,10 @@
     <unique-id>p9ayxq7v4pot</unique-id>
     <saved-with-version>12300</saved-with-version>
     <used-plugins>
-        <plugin author="Scirra" id="Text" version="1">Text</plugin>
-        <plugin author="Rex.Rainbow, JP Deblonde" id="Rex_Video" version="1">Video</plugin>
         <plugin author="Scirra" id="NinePatch" version="1">9-patch</plugin>
+        <plugin author="Rex.Rainbow, JP Deblonde" id="Rex_Video" version="1">Video</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
     </used-plugins>
     <used-behaviors />
@@ -62,13 +63,21 @@
         <object-type name="Message_txt">
             <plugin id="Text" />
         </object-type>
+        <object-type name="ButterSweetMenuScreenPlaceHolder">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder expanded="1">
         <layout-folder expanded="0" name="Debug">
             <layout>Text Screen Debug.xml</layout>
         </layout-folder>
-        <layout-folder expanded="0" name="Misc. Layouts">
+        <layout-folder expanded="1" name="Misc. Layouts">
             <layout>Slash Screen.xml</layout>
             <layout>Title Screen.xml</layout>
         </layout-folder>
