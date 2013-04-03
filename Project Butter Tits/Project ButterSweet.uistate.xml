@@ -10,8 +10,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout active="1">Mixing Table</layout>
-        <event-sheet>Mixing Table Sheet</event-sheet>
+        <layout>Mixing Table</layout>
+        <event-sheet active="1">Mixing Table Sheet</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="Project settings" />
